@@ -1,7 +1,7 @@
 track gcPercent
-type bigWig 0 100
-shortLabel GC Percent
 longLabel GC Percent in 5-base Window
+shortLabel GC Percent
+type bigWig 0 100
 group map
 visibility dense
 windowingFunction Mean
@@ -17,21 +17,20 @@ viewLimits 30:70
 html gcPercent.html
 
 track cytoBandIdeo
-type bigBed
-shortLabel cytoBandIdeo
 longLabel Chromosome ideogram
+shortLabel cytoBandIdeo
 bigDataUrl cytoBandIdeo.bb
+type bigBed
 
 track Annot
-type bigGenePred
-shortLabel Annot
 longLabel Reference Annotation
+shortLabel Annot
 group genePreds
-color 0,0,0
+type bigGenePred
 bigDataUrl Annot.bb
+color 255,0,0
 visibility dense
 html Annot.html
-
 
 group genePreds
 type bigGenePred
