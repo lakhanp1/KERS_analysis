@@ -1,11 +1,11 @@
 track gcPercent
+type bigWig 0 100
+bigDataUrl ANidulans_hub.gc5Base.bw
 longLabel GC Percent in 5-base Window
 shortLabel GC Percent
-type bigWig 0 100
 group map
 visibility dense
 windowingFunction Mean
-bigDataUrl ANidulans_hub.gc5Base.bw
 priority 2
 autoScale Off
 maxHeightPixels 128:36:16
@@ -17,17 +17,17 @@ viewLimits 30:70
 html gcPercent.html
 
 track cytoBandIdeo
-longLabel Chromosome ideogram
-shortLabel cytoBandIdeo
-bigDataUrl cytoBandIdeo.bb
 type bigBed
+bigDataUrl cytoBandIdeo.bb
+shortLabel cytoBandIdeo
+longLabel Chromosome ideogram
 
 track Annot
-longLabel Reference Annotation
-shortLabel Annot
-group genePreds
 type bigGenePred
 bigDataUrl Annot.bb
+shortLabel Annot
+longLabel Reference Annotation
+group genePreds
 color 255,0,0
 visibility dense
 html Annot.html
