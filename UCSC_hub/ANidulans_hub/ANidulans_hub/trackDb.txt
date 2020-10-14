@@ -37,3 +37,10 @@ altColor 128,128,128
 viewLimits 30:70
 html gcPercent.html
 
+track kdmB_20h_HA_1
+type bigWig 0 100
+bigDataUrl An_kdmB_20h_HA_1_normalized.bw
+shortLabel kdmB_20h_HA_1
+longLabel kdmB_20h_HA_1
+color 255,0,0
+visibility full
