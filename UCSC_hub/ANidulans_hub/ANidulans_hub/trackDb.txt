@@ -44,3 +44,15 @@ shortLabel kdmB_20h_HA_1
 longLabel kdmB_20h_HA_1
 color 255,0,0
 visibility full
+group 20h
+priority 1
+
+track ecoA_20h_HA
+type bigWig 0 100
+bigDataUrl An_ecoA_20h_HA_1_normalized.bw
+shortLabel ecoA_20h_HA
+longLabel ecoA_20h_HA
+color 153,0,132
+visibility full
+group 20h
+priority 2
