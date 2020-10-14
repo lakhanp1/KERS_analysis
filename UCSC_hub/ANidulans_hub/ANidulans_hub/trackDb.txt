@@ -32,11 +32,6 @@ color 0,0,0
 visibility dense
 html Annot.html
 
-group genePreds
-type bigGenePred
-bigDataUrl Annot.bb
-color 0,0,0
-
 track kdmB_20h_1
 type bigWig 0 100
 bigDataUrl An_kdmB_20h_HA_1_normalized.bw
@@ -44,4 +39,5 @@ shortLabel kdmB_20h_1_HA
 longLabel kdmB_20h_1_HA
 autoScale on
 color 255,0,0
-
+visibility full
+group 20h
