@@ -16,5 +16,6 @@
 sample_info.txt
 /data/*
 !/data/reference_data/
+!/data/ANidulans_hub/
 /analysis
 /reports
