@@ -1,8 +1,8 @@
 track gcPercent
 type bigWig 0 100
 bigDataUrl ANidulans_hub.gc5Base.bw
-longLabel GC Percent in 5-base Window
 shortLabel GC Percent
+longLabel GC Percent in 5-base Window
 group map
 visibility dense
 windowingFunction Mean
@@ -28,12 +28,20 @@ bigDataUrl Annot.bb
 shortLabel Annot
 longLabel Reference Annotation
 group genePreds
-color 255,0,0
+color 0,0,0
 visibility dense
 html Annot.html
 
 group genePreds
 type bigGenePred
 bigDataUrl Annot.bb
+color 0,0,0
+
+track kdmB_20h_1
+type bigWig 0 100
+bigDataUrl An_kdmB_20h_HA_1_normalized.bw
+shortLabel kdmB_20h_1_HA
+longLabel kdmB_20h_1_HA
+autoScale on
 color 255,0,0
 
