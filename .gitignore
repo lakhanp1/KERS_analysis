@@ -3,10 +3,6 @@
 .RData
 .Ruserdata
 *.log
-*.bam
-*.bai
-*.bw
-*.bdg
 *.pptx
 *.xlsx
 *.docx
@@ -14,8 +10,8 @@
 /Rplots.pdf
 /logs
 sample_info.txt
-/data/*
+/data/**/*.bw
+/data/
 !/data/reference_data/
-!/data/ANidulans_hub/
 /analysis
 /reports
