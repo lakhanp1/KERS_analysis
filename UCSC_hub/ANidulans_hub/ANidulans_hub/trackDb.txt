@@ -1,3 +1,19 @@
+track cytoBandIdeo
+type bigBed
+bigDataUrl cytoBandIdeo.bb
+shortLabel cytoBandIdeo
+longLabel Chromosome ideogram
+
+track Annot
+type bigGenePred
+bigDataUrl Annot.bb
+shortLabel Annot
+longLabel Reference Annotation
+group genePreds
+color 0,0,0
+visibility dense
+html Annot.html
+
 track gcPercent
 type bigWig 0 100
 bigDataUrl ANidulans_hub.gc5Base.bw
@@ -16,23 +32,6 @@ altColor 128,128,128
 viewLimits 30:70
 html gcPercent.html
 
-track cytoBandIdeo
-type bigBed
-bigDataUrl cytoBandIdeo.bb
-shortLabel cytoBandIdeo
-longLabel Chromosome ideogram
-
-track Annot
-type bigGenePred
-bigDataUrl Annot.bb
-shortLabel Annot
-longLabel Reference Annotation
-group genePreds
-color 0,0,0
-visibility dense
-html Annot.html
-
-
 track kdmB_20h_HA_1
 type bigWig 0 100
 bigDataUrl An_kdmB_20h_HA_1_normalized.bw
@@ -43,15 +42,3 @@ color 255,0,0
 visibility full
 group 20h
 priority 1
-
-track ecoA_20h_HA
-type bigWig 0 100
-bigDataUrl An_ecoA_20h_HA_1_normalized.bw
-shortLabel ecoA_20h_HA
-longLabel ecoA_20h_HA
-autoScale group
-color 153,0,132
-visibility full
-group 20h
-priority 2
-
