@@ -38,6 +38,8 @@ type bigWig 0 100
 shortLabel KERS_20hr
 longLabel KERS complex at 20hr
 allButtonPair on
+group 20h
+visibility full
 priority 2
 
 track kdmB_20h_HA_1
@@ -98,6 +100,8 @@ type bigWig 0 100
 shortLabel KERS_48hr
 longLabel KERS complex at 48hr
 allButtonPair on
+group 48h
+visibility full
 priority 3
 
 track kdmB_48h_HA_1
@@ -106,7 +110,7 @@ parent 48hr_composite on
 bigDataUrl An_kdmB_48h_HA_1_normalized.bw
 shortLabel kdmB_48h_HA_1
 longLabel kdmB_48h_HA_1
-autoScale on
+autoScale group
 color 255,0,0
 maxHeightPixels 100:30:8
 visibility full
@@ -119,7 +123,7 @@ parent 48hr_composite on
 bigDataUrl An_ecoA_48h_HA_1_normalized.bw
 shortLabel ecoA_48h_HA_1
 longLabel ecoA_48h_HA_1
-autoScale on
+autoScale group
 color 153,0,132
 maxHeightPixels 100:30:8
 visibility full
@@ -132,7 +136,7 @@ parent 48hr_composite on
 bigDataUrl An_rpdA_48h_HA_1_normalized.bw
 shortLabel rpdA_48h_HA_1
 longLabel rpdA_48h_HA_1
-autoScale on
+autoScale group
 maxHeightPixels 100:30:8
 color 51,0,212
 visibility full
@@ -145,7 +149,7 @@ parent 48hr_composite on
 bigDataUrl An_sntB_48h_HA_1_normalized.bw
 shortLabel sntB_48h_HA_1
 longLabel sntB_48h_HA_1
-autoScale on
+autoScale group
 color 0,129,89
 maxHeightPixels 100:30:8
 visibility full
