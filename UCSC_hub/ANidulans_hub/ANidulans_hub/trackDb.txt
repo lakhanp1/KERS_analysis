@@ -67,6 +67,7 @@ priority 2
 
 track rpdA_20h_HA_1
 type bigWig 0 100
+parent 20hr_composite on
 bigDataUrl An_rpdA_20h_HA_1_normalized.bw
 shortLabel rpdA_20h_HA_1
 longLabel rpdA_20h_HA_1
@@ -79,6 +80,7 @@ priority 3
 
 track sntB_20h_HA_1
 type bigWig 0 100
+parent 20hr_composite on
 bigDataUrl An_sntB_20h_HA_1_normalized.bw
 shortLabel sntB_20h_HA_1
 longLabel sntB_20h_HA_1
