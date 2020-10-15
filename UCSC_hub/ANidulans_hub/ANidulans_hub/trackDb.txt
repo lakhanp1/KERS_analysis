@@ -32,6 +32,7 @@ altColor 128,128,128
 viewLimits 30:70
 html gcPercent.html
 
+## 20hr data
 track 20hr_composite
 compositeTrack on
 type bigWig 0 100
@@ -40,7 +41,7 @@ longLabel KERS complex at 20hr
 allButtonPair on
 group 20h
 visibility full
-maxHeightPixels 100:30:8
+maxHeightPixels 100:25:8
 priority 2
 
 track kdmB_20h_HA_1
@@ -91,13 +92,38 @@ visibility full
 group 20h
 priority 4
 
+track untagged_20h_HA_1
+type bigWig 0 100
+parent 20h_composite on
+bigDataUrl An_untagged_20h_HA_1_normalized.bw
+shortLabel untagged_20h_HA_1
+longLabel untagged_20h_HA_1
+autoScale group
+color 38,38,38
+visibility full
+group 20h
+priority 5
+
+track untagged_20h_HA_2
+type bigWig 0 100
+parent 20h_composite on
+bigDataUrl An_untagged_20h_HA_2_normalized.bw
+shortLabel untagged_20h_HA_2
+longLabel untagged_20h_HA_2
+autoScale group
+color 38,38,38
+visibility full
+group 20h
+priority 5
+
+## 48hr data
 track 48hr_composite
 compositeTrack on
 type bigWig 0 100
 shortLabel KERS_48hr
 longLabel KERS complex at 48hr
 allButtonPair on
-maxHeightPixels 100:20:8
+maxHeightPixels 100:25:8
 group 48h
 visibility full
 priority 3
@@ -149,3 +175,27 @@ color 0,129,89
 visibility full
 group 48h
 priority 4
+
+track untagged_48h_HA_1
+type bigWig 0 100
+parent 48hr_composite on
+bigDataUrl An_untagged_48h_HA_1_normalized.bw
+shortLabel untagged_48h_HA_1
+longLabel untagged_48h_HA_1
+autoScale group
+color 38,38,38
+visibility full
+group 48h
+priority 5
+
+track untagged_48h_HA_2
+type bigWig 0 100
+parent 48hr_composite on
+bigDataUrl An_untagged_48h_HA_2_normalized.bw
+shortLabel untagged_48h_HA_2
+longLabel untagged_48h_HA_2
+autoScale group
+color 38,38,38
+visibility full
+group 48h
+priority 5
