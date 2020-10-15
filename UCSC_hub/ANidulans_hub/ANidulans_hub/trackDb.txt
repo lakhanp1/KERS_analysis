@@ -39,7 +39,9 @@ html gcPercent.html
 
 track 20h_composite
 compositeTrack on
+type bigWig 0 100
 shortLabel 20h_KERS_composite
+longLabel 20h_KERS_composite
 allButtonPair on
 maxHeightPixels 100:8:8
 
