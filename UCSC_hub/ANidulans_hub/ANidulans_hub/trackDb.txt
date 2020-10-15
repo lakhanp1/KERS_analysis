@@ -114,7 +114,7 @@ autoScale group
 color 38,38,38
 visibility full
 group 20h
-priority 5
+priority 6
 
 ## 48hr data
 track 48h_composite
@@ -198,4 +198,4 @@ autoScale group
 color 38,38,38
 visibility full
 group 48h
-priority 5
+priority 6
