@@ -19,7 +19,7 @@ longLabel GC Percent in 5-base Window
 shortLabel GC Percent
 type bigWig 0 100
 group map
-visibility full
+visibility hide
 windowingFunction Mean
 bigDataUrl ANidulans_hub.gc5Base.bw
 priority 2
@@ -40,6 +40,7 @@ longLabel KERS complex at 20hr
 allButtonPair on
 group 20h
 visibility full
+maxHeightPixels 100:30:8
 priority 2
 
 track kdmB_20h_HA_1
@@ -50,7 +51,6 @@ shortLabel kdmB_20h_HA_1
 longLabel kdmB_20h_HA_1
 autoScale group
 color 255,0,0
-maxHeightPixels 100:30:8
 visibility full
 group 20h
 priority 1
@@ -63,7 +63,7 @@ shortLabel ecoA_20h_HA_1
 longLabel ecoA_20h_HA_1
 autoScale group
 color 153,0,132
-maxHeightPixels 100:30:8
+#maxHeightPixels 100:30:8
 visibility full
 group 20h
 priority 2
@@ -76,7 +76,7 @@ shortLabel rpdA_20h_HA_1
 longLabel rpdA_20h_HA_1
 autoScale group
 color 51,0,212
-maxHeightPixels 100:30:8
+#maxHeightPixels 100:30:8
 visibility full
 group 20h
 priority 3
@@ -89,7 +89,7 @@ shortLabel sntB_20h_HA_1
 longLabel sntB_20h_HA_1
 autoScale group
 color 0,129,89
-maxHeightPixels 100:30:8
+#maxHeightPixels 100:30:8
 visibility full
 group 20h
 priority 4
