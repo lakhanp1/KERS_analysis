@@ -37,49 +37,59 @@ altColor 128,128,128
 viewLimits 30:70
 html gcPercent.html
 
-track kdmB_20h_HA_1
-type bigWig 0 100
-bigDataUrl An_kdmB_20h_HA_1_normalized.bw
-shortLabel kdmB_20h_HA_1
-longLabel kdmB_20h_HA_1
-autoScale on
-color 255,0,0
-visibility full
-group 20h
-priority 1
+track 20h_composite
+compositeTrack on
+shortLabel 20h_KERS_composite
+allButtonPair on
+maxHeightPixels 100:8:8
 
-track ecoA_20h_HA_1
-type bigWig 0 100
-bigDataUrl An_ecoA_20h_HA_1_normalized.bw
-shortLabel ecoA_20h_HA_1
-longLabel ecoA_20h_HA_1
-autoScale on
-color 153,0,132
-visibility full
-group 20h
-priority 2
+	track kdmB_20h_HA_1
+	type bigWig 0 100
+	bigDataUrl An_kdmB_20h_HA_1_normalized.bw
+	shortLabel kdmB_20h_HA_1
+	longLabel kdmB_20h_HA_1
+	parent 20h_composite on
+	autoScale on
+	color 255,0,0
+	visibility full
+	group 20h
+	priority 1
 
-track rpdA_20h_HA_1
-type bigWig 0 100
-bigDataUrl An_rpdA_20h_HA_1_normalized.bw
-shortLabel rpdA_20h_HA_1
-longLabel rpdA_20h_HA_1
-autoScale on
-color 51,0,212
-visibility full
-group 20h
-priority 3
+	track ecoA_20h_HA_1
+	type bigWig 0 100
+	bigDataUrl An_ecoA_20h_HA_1_normalized.bw
+	shortLabel ecoA_20h_HA_1
+	longLabel ecoA_20h_HA_1
+	parent 20h_composite on
+	autoScale on
+	color 153,0,132
+	visibility full
+	group 20h
+	priority 2
 
-track sntB_20h_HA_1
-type bigWig 0 100
-bigDataUrl An_sntB_20h_HA_1_normalized.bw
-shortLabel sntB_20h_HA_1
-longLabel sntB_20h_HA_1
-autoScale on
-color 0,129,89
-visibility full
-group 20h
-priority 4
+	track rpdA_20h_HA_1
+	type bigWig 0 100
+	bigDataUrl An_rpdA_20h_HA_1_normalized.bw
+	shortLabel rpdA_20h_HA_1
+	longLabel rpdA_20h_HA_1
+	parent 20h_composite on
+	autoScale on
+	color 51,0,212
+	visibility full
+	group 20h
+	priority 3
+
+	track sntB_20h_HA_1
+	type bigWig 0 100
+	bigDataUrl An_sntB_20h_HA_1_normalized.bw
+	shortLabel sntB_20h_HA_1
+	longLabel sntB_20h_HA_1
+	parent 20h_composite on
+	autoScale on
+	color 0,129,89
+	visibility full
+	group 20h
+	priority 4
 
 track kdmB_48h_HA_1
 type bigWig 0 100
