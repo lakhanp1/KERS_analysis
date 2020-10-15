@@ -21,7 +21,7 @@ type bigWig 0 100
 group map
 visibility hide
 windowingFunction Mean
-bigDataUrl ANidulans_hub.gc5Base.bw
+bigDataUrl data/ANidulans_hub.gc5Base.bw
 priority 2
 autoScale Off
 maxHeightPixels 128:36:16
