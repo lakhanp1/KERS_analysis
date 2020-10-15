@@ -56,6 +56,18 @@ visibility full
 group 20h
 priority 1
 
+track kdmB_20h_HA_2
+bigDataUrl data/An_kdmB_20h_HA_2_normalized.bw
+type bigWig 0 100
+parent 20h_composite on
+shortLabel kdmB_20h_HA_2
+longLabel kdmB_20h_HA_2
+autoScale group
+color 255,0,0
+visibility full
+group 20h
+priority 1.5
+
 track ecoA_20h_HA_1
 type bigWig 0 100
 parent 20h_composite on
@@ -67,6 +79,18 @@ color 153,0,132
 visibility full
 group 20h
 priority 2
+
+track ecoA_20h_HA_2
+bigDataUrl data/An_ecoA_20h_HA_2_normalized.bw
+type bigWig 0 100
+parent 20h_composite on
+shortLabel ecoA_20h_HA_2
+longLabel ecoA_20h_HA_2
+autoScale group
+color 153,0,132
+visibility full
+group 20h
+priority 2.5
 
 track rpdA_20h_HA_1
 type bigWig 0 100
@@ -80,6 +104,18 @@ visibility full
 group 20h
 priority 3
 
+track rpdA_20h_HA_2
+bigDataUrl data/An_rpdA_20h_HA_2_normalized.bw
+type bigWig 0 100
+parent 20h_composite on
+shortLabel rpdA_20h_HA_2
+longLabel rpdA_20h_HA_2
+autoScale group
+color 51,0,212
+visibility full
+group 20h
+priority 3.5
+
 track sntB_20h_HA_1
 type bigWig 0 100
 parent 20h_composite on
@@ -91,6 +127,18 @@ color 0,129,89
 visibility full
 group 20h
 priority 4
+
+track sntB_20h_HA_2
+bigDataUrl data/An_sntB_20h_HA_2_normalized.bw
+type bigWig 0 100
+parent 20h_composite on
+shortLabel sntB_20h_HA_2
+longLabel sntB_20h_HA_2
+autoScale group
+color 0,129,89
+visibility full
+group 20h
+priority 4.5
 
 track untagged_20h_HA_1
 type bigWig 0 100
@@ -114,7 +162,7 @@ autoScale group
 color 38,38,38
 visibility full
 group 20h
-priority 6
+priority 5.5
 
 ## 48hr data
 track 48h_composite
@@ -140,6 +188,18 @@ visibility full
 group 48h
 priority 1
 
+track kdmB_48h_HA_2
+bigDataUrl data/An_kdmB_48h_HA_2_normalized.bw
+type bigWig 0 100
+parent 48h_composite on
+shortLabel kdmB_48h_HA_2
+longLabel kdmB_48h_HA_2
+autoScale group
+color 255,0,0
+visibility full
+group 48h
+priority 1.5
+
 track ecoA_48h_HA_1
 type bigWig 0 100
 parent 48h_composite on
@@ -151,6 +211,18 @@ color 153,0,132
 visibility full
 group 48h
 priority 2
+
+track ecoA_48h_HA_2
+bigDataUrl data/An_ecoA_48h_HA_2_normalized.bw
+type bigWig 0 100
+parent 48h_composite on
+shortLabel ecoA_48h_HA_2
+longLabel ecoA_48h_HA_2
+autoScale group
+color 153,0,132
+visibility full
+group 48h
+priority 2.5
 
 track rpdA_48h_HA_1
 type bigWig 0 100
@@ -164,6 +236,18 @@ visibility full
 group 48h
 priority 3
 
+track rpdA_48h_HA_2
+bigDataUrl data/An_rpdA_48h_HA_2_normalized.bw
+type bigWig 0 100
+parent 48h_composite on
+shortLabel rpdA_48h_HA_2
+longLabel rpdA_48h_HA_2
+autoScale group
+color 51,0,212
+visibility full
+group 48h
+priority 3.5
+
 track sntB_48h_HA_1
 type bigWig 0 100
 parent 48h_composite on
@@ -175,6 +259,18 @@ color 0,129,89
 visibility full
 group 48h
 priority 4
+
+track sntB_48h_HA_2
+bigDataUrl data/An_sntB_48h_HA_2_normalized.bw
+type bigWig 0 100
+parent 48h_composite on
+shortLabel sntB_48h_HA_2
+longLabel sntB_48h_HA_2
+autoScale group
+color 0,129,89
+visibility full
+group 48h
+priority 4.5
 
 track untagged_48h_HA_1
 type bigWig 0 100
@@ -198,4 +294,4 @@ autoScale group
 color 38,38,38
 visibility full
 group 48h
-priority 6
+priority 5.5
