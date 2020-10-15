@@ -35,9 +35,10 @@ html gcPercent.html
 track 20hr_composite
 compositeTrack on
 type bigWig 0 100
-shortLabel 20hr_composite
-longLabel 20hr_composite
+shortLabel KERS_20hr
+longLabel KERS complex at 20hr
 allButtonPair on
+priority 1
 
 track kdmB_20h_HA_1
 type bigWig 0 100
@@ -91,8 +92,17 @@ visibility full
 group 20h
 priority 4
 
+track 48hr_composite
+compositeTrack on
+type bigWig 0 100
+shortLabel KERS_48hr
+longLabel KERS complex at 48hr
+allButtonPair on
+priority 2
+
 track kdmB_48h_HA_1
 type bigWig 0 100
+parent 48hr_composite on
 bigDataUrl An_kdmB_48h_HA_1_normalized.bw
 shortLabel kdmB_48h_HA_1
 longLabel kdmB_48h_HA_1
@@ -105,6 +115,7 @@ priority 1
 
 track ecoA_48h_HA_1
 type bigWig 0 100
+parent 48hr_composite on
 bigDataUrl An_ecoA_48h_HA_1_normalized.bw
 shortLabel ecoA_48h_HA_1
 longLabel ecoA_48h_HA_1
@@ -117,6 +128,7 @@ priority 2
 
 track rpdA_48h_HA_1
 type bigWig 0 100
+parent 48hr_composite on
 bigDataUrl An_rpdA_48h_HA_1_normalized.bw
 shortLabel rpdA_48h_HA_1
 longLabel rpdA_48h_HA_1
@@ -129,6 +141,7 @@ priority 3
 
 track sntB_48h_HA_1
 type bigWig 0 100
+parent 48hr_composite on
 bigDataUrl An_sntB_48h_HA_1_normalized.bw
 shortLabel sntB_48h_HA_1
 longLabel sntB_48h_HA_1
