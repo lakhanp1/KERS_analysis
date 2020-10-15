@@ -47,7 +47,7 @@ priority 2
 track kdmB_20h_HA_1
 type bigWig 0 100
 parent 20h_composite on
-bigDataUrl An_kdmB_20h_HA_1_normalized.bw
+bigDataUrl data/An_kdmB_20h_HA_1_normalized.bw
 shortLabel kdmB_20h_HA_1
 longLabel kdmB_20h_HA_1
 autoScale group
@@ -59,7 +59,7 @@ priority 1
 track ecoA_20h_HA_1
 type bigWig 0 100
 parent 20h_composite on
-bigDataUrl An_ecoA_20h_HA_1_normalized.bw
+bigDataUrl data/An_ecoA_20h_HA_1_normalized.bw
 shortLabel ecoA_20h_HA_1
 longLabel ecoA_20h_HA_1
 autoScale group
@@ -71,7 +71,7 @@ priority 2
 track rpdA_20h_HA_1
 type bigWig 0 100
 parent 20h_composite on
-bigDataUrl An_rpdA_20h_HA_1_normalized.bw
+bigDataUrl data/An_rpdA_20h_HA_1_normalized.bw
 shortLabel rpdA_20h_HA_1
 longLabel rpdA_20h_HA_1
 autoScale group
@@ -83,7 +83,7 @@ priority 3
 track sntB_20h_HA_1
 type bigWig 0 100
 parent 20h_composite on
-bigDataUrl An_sntB_20h_HA_1_normalized.bw
+bigDataUrl data/An_sntB_20h_HA_1_normalized.bw
 shortLabel sntB_20h_HA_1
 longLabel sntB_20h_HA_1
 autoScale group
@@ -95,7 +95,7 @@ priority 4
 track untagged_20h_HA_1
 type bigWig 0 100
 parent 20h_composite on
-bigDataUrl An_untagged_20h_HA_1_normalized.bw
+bigDataUrl data/An_untagged_20h_HA_1_normalized.bw
 shortLabel untagged_20h_HA_1
 longLabel untagged_20h_HA_1
 autoScale group
@@ -107,7 +107,7 @@ priority 5
 track untagged_20h_HA_2
 type bigWig 0 100
 parent 20h_composite on
-bigDataUrl An_untagged_20h_HA_2_normalized.bw
+bigDataUrl data/An_untagged_20h_HA_2_normalized.bw
 shortLabel untagged_20h_HA_2
 longLabel untagged_20h_HA_2
 autoScale group
@@ -131,7 +131,7 @@ priority 3
 track kdmB_48h_HA_1
 type bigWig 0 100
 parent 48h_composite on
-bigDataUrl An_kdmB_48h_HA_1_normalized.bw
+bigDataUrl data/An_kdmB_48h_HA_1_normalized.bw
 shortLabel kdmB_48h_HA_1
 longLabel kdmB_48h_HA_1
 autoScale group
@@ -143,7 +143,7 @@ priority 1
 track ecoA_48h_HA_1
 type bigWig 0 100
 parent 48h_composite on
-bigDataUrl An_ecoA_48h_HA_1_normalized.bw
+bigDataUrl data/An_ecoA_48h_HA_1_normalized.bw
 shortLabel ecoA_48h_HA_1
 longLabel ecoA_48h_HA_1
 autoScale group
@@ -155,7 +155,7 @@ priority 2
 track rpdA_48h_HA_1
 type bigWig 0 100
 parent 48h_composite on
-bigDataUrl An_rpdA_48h_HA_1_normalized.bw
+bigDataUrl data/An_rpdA_48h_HA_1_normalized.bw
 shortLabel rpdA_48h_HA_1
 longLabel rpdA_48h_HA_1
 autoScale group
@@ -167,7 +167,7 @@ priority 3
 track sntB_48h_HA_1
 type bigWig 0 100
 parent 48h_composite on
-bigDataUrl An_sntB_48h_HA_1_normalized.bw
+bigDataUrl data/An_sntB_48h_HA_1_normalized.bw
 shortLabel sntB_48h_HA_1
 longLabel sntB_48h_HA_1
 autoScale group
@@ -179,7 +179,7 @@ priority 4
 track untagged_48h_HA_1
 type bigWig 0 100
 parent 48h_composite on
-bigDataUrl An_untagged_48h_HA_1_normalized.bw
+bigDataUrl data/An_untagged_48h_HA_1_normalized.bw
 shortLabel untagged_48h_HA_1
 longLabel untagged_48h_HA_1
 autoScale group
@@ -191,7 +191,7 @@ priority 5
 track untagged_48h_HA_2
 type bigWig 0 100
 parent 48h_composite on
-bigDataUrl An_untagged_48h_HA_2_normalized.bw
+bigDataUrl data/An_untagged_48h_HA_2_normalized.bw
 shortLabel untagged_48h_HA_2
 longLabel untagged_48h_HA_2
 autoScale group
