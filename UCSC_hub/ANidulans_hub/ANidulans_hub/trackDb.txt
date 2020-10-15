@@ -14,11 +14,6 @@ color 0,0,0
 visibility dense
 html Annot.html
 
-group genePreds
-type bigGenePred
-bigDataUrl Annot.bb
-color 0,0,0
-
 track gcPercent
 longLabel GC Percent in 5-base Window
 shortLabel GC Percent
