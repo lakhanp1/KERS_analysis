@@ -44,7 +44,7 @@ shortLabel kdmB_20h_HA_1
 longLabel kdmB_20h_HA_1
 autoScale on
 color 255,0,0
-maxHeightPixels 100:8:8
+maxHeightPixels 100:16:8
 visibility full
 group 20h
 priority 1
@@ -56,7 +56,7 @@ shortLabel ecoA_20h_HA_1
 longLabel ecoA_20h_HA_1
 autoScale on
 color 153,0,132
-maxHeightPixels 100:8:8
+maxHeightPixels 100:16:8
 visibility full
 group 20h
 priority 2
@@ -68,6 +68,7 @@ shortLabel rpdA_20h_HA_1
 longLabel rpdA_20h_HA_1
 autoScale on
 color 51,0,212
+maxHeightPixels 100:16:8
 visibility full
 group 20h
 priority 3
@@ -79,6 +80,7 @@ shortLabel sntB_20h_HA_1
 longLabel sntB_20h_HA_1
 autoScale on
 color 0,129,89
+maxHeightPixels 100:16:8
 visibility full
 group 20h
 priority 4
