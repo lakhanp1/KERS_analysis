@@ -1,5 +1,5 @@
 hub ANidulans_hub
-shortLabel ANidulans_hub
+shortLabel ANidulans_KERS
 longLabel A. nidulans Hub for KERS paper ChIPseq data
 genomesFile genomes.txt
 email lakhanp@um.edu.mo
