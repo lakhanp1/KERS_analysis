@@ -303,7 +303,7 @@ priority 3
 track kdmB_del_20h_composite
 compositeTrack on
 type bigWig 0 100
-shortLabel ERS_kdmB_del_20h
+shortLabel "-ERS kdmB_del 20h"
 longLabel -ERS complex at 20hr in KdmB deletion mutant
 allButtonPair on
 group 20h
@@ -383,3 +383,95 @@ priority 3
 	visibility full
 	group 20h
 	priority 6
+
+
+#####################################################
+## SntB del 20h
+track sntB_del_20h_composite
+compositeTrack on
+type bigWig 0 100
+shortLabel "KER- sntB_del 20h"
+longLabel KER- complex at 20hr in SntB deletion mutant
+allButtonPair on
+group 20h
+visibility hide
+maxHeightPixels 100:25:8
+priority 3
+
+
+	track kdmB_sntB_del_20h_HA_1
+	bigDataUrl data/An_kdmB_sntB_del_20h_HA_1_normalized.bw
+	type bigWig 0 100
+	parent sntB_del_20h_composite on
+	shortLabel kdmB_sntB_del_20h_HA_1
+	longLabel kdmB_sntB_del_20h_HA_1
+	autoScale group
+	color 255,0,0
+	visibility full
+	group 20h
+	priority 1
+
+	track kdmB_sntB_del_20h_HA_2
+	bigDataUrl data/An_kdmB_sntB_del_20h_HA_2_normalized.bw
+	type bigWig 0 100
+	parent sntB_del_20h_composite on
+	shortLabel kdmB_sntB_del_20h_HA_2
+	longLabel kdmB_sntB_del_20h_HA_2
+	autoScale group
+	color 255,0,0
+	visibility full
+	group 20h
+	priority 1
+
+	track ecoA_sntB_del_20h_HA_1
+	bigDataUrl data/An_ecoA_sntB_del_20h_HA_1_normalized.bw
+	type bigWig 0 100
+	parent sntB_del_20h_composite on
+	shortLabel ecoA_sntB_del_20h_HA_1
+	longLabel ecoA_sntB_del_20h_HA_1
+	autoScale group
+	color 153,0,132
+	visibility full
+	group 20h
+	priority 1
+
+	track ecoA_sntB_del_20h_HA_2
+	bigDataUrl data/An_ecoA_sntB_del_20h_HA_2_normalized.bw
+	type bigWig 0 100
+	parent sntB_del_20h_composite on
+	shortLabel ecoA_sntB_del_20h_HA_2
+	longLabel ecoA_sntB_del_20h_HA_2
+	autoScale group
+	color 153,0,132
+	visibility full
+	group 20h
+	priority 1
+
+
+	track rpdA_sntB_del_20h_HA_1
+	bigDataUrl data/An_rpdA_sntB_del_20h_HA_1_normalized.bw
+	type bigWig 0 100
+	parent sntB_del_20h_composite on
+	shortLabel rpdA_sntB_del_20h_HA_1
+	longLabel rpdA_sntB_del_20h_HA_1
+	autoScale group
+	color 51,0,212
+	visibility full
+	group 20h
+	priority 1
+
+	track rpdA_sntB_del_20h_HA_2
+	bigDataUrl data/An_rpdA_sntB_del_20h_HA_2_normalized.bw
+	type bigWig 0 100
+	parent sntB_del_20h_composite on
+	shortLabel rpdA_sntB_del_20h_HA_2
+	longLabel rpdA_sntB_del_20h_HA_2
+	autoScale group
+	color 51,0,212
+	visibility full
+	group 20h
+	priority 1
+
+#####################################################
+
+
