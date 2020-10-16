@@ -483,7 +483,7 @@ type bigWig 0 100
 shortLabel -ERS kdmB-del 48h
 longLabel -ERS complex at 48h in KdmB deletion mutant
 allButtonPair on
-group 20h
+group 48h
 visibility hide
 maxHeightPixels 100:25:8
 priority 6
