@@ -29,8 +29,12 @@ devtools::install_github(repo = "lakhanp1/chipmine", ref = "1.6")
 ```
 
 ### Data processing
-All the ChIPseq data was processed as per steps mentioned in [ChIPseq data processing workflow of Koon Ho Wong lab] (https://github.com/lakhanp1/bioinformatics_notes/blob/master/data/ChIPseq/01_CL_ChIPseq_pipeline.md).
+All the ChIPseq data was processed as per steps mentioned in [fungal ChIPseq data processing workflow of Koon Ho Wong lab](https://github.com/lakhanp1/bioinformatics_notes/blob/master/data/ChIPseq/01_CL_ChIPseq_pipeline.md).
 <br>
-All the normalized bigWig tracks for ChIPseq data are made available on UCSC genome browser and can be accessed using link <https://genome-asia.ucsc.edu/s/lakhanp1/A.%20nidulans%20KERS>
+
+### Data Availability
+**GEO data:**
+
+**UCSC genome browser tracks:** All the normalized bigWig tracks for ChIPseq data are made available on UCSC genome browser and can be accessed using link <https://genome-asia.ucsc.edu/s/lakhanp1/A.%20nidulans%20KERS>
 
 <br><br>
