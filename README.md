@@ -1,6 +1,6 @@
 # KdmB-EcoA-RpdA-SntB (KERS) chromatin complex ChIPseq data analysis
 
-This repository has the scripts related to KERS ChIPseq data analysis.
+KERS is a tetrameric nucleosome remodelling complex in the filamentous fungus Aspergillus nidulans that is composed of the H3K4 histone demethylase KdmB, a cohesin acetyltransferase (EcoA), a histone deacetylase (RpdA) and a reader protein (SntB). This repository has the scripts related to KERS ChIPseq data analysis.
 
 ### Required tools for data analysis
 #### *A. nidulans* annotation packages like org.db, TxDb and BSgenome
