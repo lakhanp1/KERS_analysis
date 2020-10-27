@@ -23,7 +23,7 @@ devtools::install_github(
 ```
 
 #### R package chipmine with utility functions for ChIPseq data management and processing
-`chipmine` is under active development. For the analysis involving current manuscript, `chimpine v1.6` was used 
+`chipmine` is under active development. For the analysis involving current manuscript, `chimpine v1.6` was used.
 ``` R
 devtools::install_github(repo = "lakhanp1/chipmine", ref = "1.6")
 ```
@@ -33,7 +33,7 @@ All the ChIPseq data was processed as per steps mentioned in [fungal ChIPseq dat
 <br>
 
 ### Data Availability
-**GEO data:**
+**NCBI SRA data:** ChIPseq raw data is deposited to NCBI SRA Bioproject [PRJNA591094](https://dataview.ncbi.nlm.nih.gov/object/PRJNA591094?reviewer=2vodlkj4hlsqn2bd1p37bp3723).
 
 **UCSC genome browser tracks:** All the normalized bigWig tracks for ChIPseq data are made available on UCSC genome browser and can be accessed using link <https://genome-asia.ucsc.edu/s/lakhanp1/A.%20nidulans%20KERS>
 
