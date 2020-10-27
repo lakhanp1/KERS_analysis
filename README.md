@@ -3,7 +3,7 @@
 KERS is a tetrameric nucleosome remodelling complex in the filamentous fungus Aspergillus nidulans that is composed of the H3K4 histone demethylase KdmB, a cohesin acetyltransferase (EcoA), a histone deacetylase (RpdA) and a reader protein (SntB). This repository has the scripts related to KERS ChIPseq data analysis.
 
 ### Required tools for data analysis
-#### *A. nidulans* annotation packages like org.db, TxDb and BSgenome
+#### *A. nidulans* AnnotationHub packages like `org.db`, `TxDb` and `BSgenome`
 ```R
 ## org.db
 devtools::install_github(
@@ -22,7 +22,7 @@ devtools::install_github(
 
 ```
 
-#### R package chipmine with utility functions for ChIPseq data management and processing
+#### R package `chipmine` with utility functions for ChIPseq data management and processing
 `chipmine` is under active development. For the analysis involving current manuscript, `chimpine v1.6` was used.
 ``` R
 devtools::install_github(repo = "lakhanp1/chipmine", ref = "1.6")
@@ -37,4 +37,4 @@ All the ChIPseq data was processed as per steps mentioned in [fungal ChIPseq dat
 
 **UCSC genome browser tracks:** All the normalized bigWig tracks for ChIPseq data are made available on UCSC genome browser and can be accessed using link <https://genome-asia.ucsc.edu/s/lakhanp1/A.%20nidulans%20KERS>
 
-<br><br>
+<br><br><br>
