@@ -23,9 +23,9 @@ devtools::install_github(
 ```
 
 #### R package `chipmine` with utility functions for ChIPseq data management and processing
-`chipmine` is under active development. For the analysis involving current manuscript, `chimpine v1.6` was used.
+`chipmine` is under active development. For the analysis involving current manuscript, `chimpine v1.6.0` was used.
 ``` R
-devtools::install_github(repo = "lakhanp1/chipmine", ref = "1.6")
+devtools::install_github(repo = "lakhanp1/chipmine", ref = "1.6.0")
 ```
 
 ### Data processing
