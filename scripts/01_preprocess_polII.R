@@ -1,9 +1,9 @@
-library(chipmine)
-library(org.Anidulans.FGSCA4.eg.db)
-library(TxDb.Anidulans.AspGD.GFF)
-library(foreach)
-library(doParallel)
-library(here)
+suppressPackageStartupMessages(library(chipmine))
+suppressPackageStartupMessages(library(org.Anidulans.FGSCA4.eg.db))
+suppressPackageStartupMessages(library(TxDb.Anidulans.FGSCA4.AspGD.GFF))
+suppressPackageStartupMessages(library(foreach))
+suppressPackageStartupMessages(library(doParallel))
+suppressPackageStartupMessages(library(here))
 
 ## 1) annotate peaks
 ## 2) create gene level peak annotation data
@@ -15,16 +15,16 @@ rm(list = ls())
 
 ##################################################################################
 
-file_exptInfo <- here::here("data", "referenceData/sampleInfo.txt")
+file_exptInfo <- here::here("data", "reference_data", "sampleInfo.txt")
+file_genes <- here::here("data", "reference_data", "AN_genesForPolII.bed")
 
-file_genes <- here::here("data", "referenceData/AN_genesForPolII.bed")
+TF_dataPath <- here::here("..", "data", "A_nidulans", "TF_data")
+polII_dataPath <- here::here("..", "data", "A_nidulans", "polII_data")
+hist_dataPath <- here::here("..", "data", "A_nidulans", "histone_data")
+other_dataPath <- here::here("..", "data", "A_nidulans", "other_data")
+
 orgDb <- org.Anidulans.FGSCA4.eg.db
-txDb <- TxDb.Anidulans.AspGD.GFF
-
-TF_dataPath <- here::here("data", "TF_data")
-polII_dataPath <- here::here("data", "polII_data")
-hist_dataPath <- here::here("data", "histone_data")
-other_dataPath <- here::here("data", "other_data")
+txDb <- TxDb.Anidulans.FGSCA4.AspGD.GFF
 
 file_polIISamples <- paste(polII_dataPath, "/", "sample_polII.list", sep = "")
 
@@ -90,7 +90,7 @@ for (i in 1:nrow(polII_info)) {
 
 polIIMat <- get_polII_expressions(genesDf = geneSet, exptInfo = polII_info) %>% 
   # dplyr::select(-starts_with("is_expressed")) %>%
-  dplyr::select(chr, start, end, geneId, strand, length, DESCRIPTION, everything())
+  dplyr::select(geneId, DESCRIPTION, everything())
 
 
 readr::write_tsv(x = polIIMat, path = paste(polII_dataPath, "/polII_signal_matrix.tab", sep = ""))

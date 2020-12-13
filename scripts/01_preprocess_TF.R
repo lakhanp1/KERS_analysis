@@ -16,16 +16,16 @@ rm(list = ls())
 
 ##################################################################################
 
-file_exptInfo <- here::here("data", "referenceData/sampleInfo.txt")
+file_exptInfo <- here::here("data", "reference_data", "sampleInfo.txt")
+file_genes <- here::here("data", "reference_data", "AN_genesForPolII.bed")
 
-file_genes <- here::here("data", "referenceData/AN_genesForPolII.bed")
+TF_dataPath <- here::here("..", "data", "A_nidulans", "TF_data")
+polII_dataPath <- here::here("..", "data", "A_nidulans", "polII_data")
+hist_dataPath <- here::here("..", "data", "A_nidulans", "histone_data")
+other_dataPath <- here::here("..", "data", "A_nidulans", "other_data")
+
 orgDb <- org.Anidulans.FGSCA4.eg.db
 txDb <- TxDb.Anidulans.FGSCA4.AspGD.GFF
-
-TF_dataPath <- here::here("data", "TF_data")
-polII_dataPath <- here::here("data", "polII_data")
-hist_dataPath <- here::here("data", "histone_data")
-other_dataPath <- here::here("data", "other_data")
 
 file_tf_macs2 <- paste(TF_dataPath, "/", "sample_tf_macs2.list", sep = "")
 file_tf <- paste(TF_dataPath, "/", "sample_tf.list", sep = "")
@@ -85,6 +85,8 @@ for(i in 1:nrow(tfInfo)){
     tfInfo$peakType[i] == "narrow" ~ "narrowPeak",
     tfInfo$peakType[i] == "broad" ~ "broadPeak"
   )
+  
+  cat("Annotating", tfInfo$sampleId[i],"\n")
   
   peakAn <- narrowPeak_annotate(
     peakFile = tfInfo$peakFile[i],
@@ -234,16 +236,32 @@ for (i in 1:nrow(tfInfo)) {
   )
   
   peakAn <- narrowPeak_annotate(
+    # peakFile = tfInfo$peakFile[i],
+    # txdb = txDb,
+    # txIds = txInfo$TXID,
+    # fileFormat = peakType,
+    # includeFractionCut = 0.7,
+    # bindingInGene = TRUE,
+    # promoterLength = 700,
+    # upstreamLimit = 1500,
+    # insideSkewToEndCut = 0.7,
+    # removePseudo = FALSE,
+    # output = tfInfo$peakAnno[i]
     peakFile = tfInfo$peakFile[i],
     txdb = txDb,
+    summitRegion = 1,
     txIds = txInfo$TXID,
     fileFormat = peakType,
+    promoterLength = 700,
+    upstreamLimit = 1500,
+    bidirectionalDistance = 500,
+    bidirectionalSkew = 0.2,
     includeFractionCut = 0.7,
     bindingInGene = TRUE,
-    promoterLength = 500,
     insideSkewToEndCut = 0.7,
-    removePseudo = FALSE,
-    output = tfInfo$peakAnno[i])
+    output = tfInfo$peakAnno[i],
+    removePseudo = TRUE
+  )
   
   if( !is.null(peakAn) ){
     tfDf <- gene_level_peak_annotation(
