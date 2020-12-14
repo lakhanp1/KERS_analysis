@@ -1,7 +1,7 @@
-library(chipmine)
-library(here)
-library(org.Anidulans.FGSCA4.eg.db)
-library(TxDb.Anidulans.FGSCA4.AspGD.GFF)
+suppressPackageStartupMessages(library(chipmine))
+suppressPackageStartupMessages(library(here))
+suppressPackageStartupMessages(library(org.Anidulans.FGSCA4.eg.db))
+suppressPackageStartupMessages(library(TxDb.Anidulans.FGSCA4.AspGD.GFF))
 
 
 ## This script plots the profile heatmaps for multiple samples. If the expression values are present, it
@@ -13,12 +13,11 @@ rm(list = ls())
 
 ## IMP: the first sampleID will be treated primary and clustering will be done/used for/of this sample
 comparisonName <- "geneset2_sex_asex_20h"
-workDir <- here::here("kdmB_analysis", "03_KERS_complex", "KERS_complex_20h", comparisonName)
+workDir <- here::here("analysis", "03_KERS_complex", "KERS_complex_20h", comparisonName)
 outPrefix <- paste(workDir, "/", comparisonName, sep = "")
 
 file_plotSamples <- paste(workDir, "/", "samples.txt", sep = "")
 file_geneSubset <- paste(workDir, "/", "geneList.txt", sep = "")
-
 
 matrixType <- "2kb_ATG_1kb"
 up <- 2000
@@ -30,36 +29,35 @@ matrixDim = c(c(up, body, down)/binSize, binSize)
 
 showExpressionHeatmap <- FALSE
 
+## genes to read
+file_exptInfo <- here::here("data", "reference_data", "sampleInfo.txt")
+file_genes <- here::here("data", "reference_data", "AN_genesForPolII.bed")
+
+file_topGoMap <- "E:/Chris_UM/Database/A_Nidulans/ANidulans_OrgDb/geneid2go.ANidulans.topGO.map"
+
+TF_dataPath <- here::here("..", "data", "A_nidulans", "TF_data")
+polII_dataPath <- here::here("..", "data", "A_nidulans", "polII_data")
+hist_dataPath <- here::here("..", "data", "A_nidulans", "histone_data")
+other_dataPath <- here::here("..", "data", "A_nidulans", "other_data")
+
 orgDb <- org.Anidulans.FGSCA4.eg.db
 txDb <- TxDb.Anidulans.FGSCA4.AspGD.GFF
-
-
-## genes to read
-file_exptInfo <- here::here("data", "referenceData/sampleInfo.txt")
-file_genes <- here::here("data", "referenceData/AN_genesForPolII.bed")
-file_topGoMap <- "E:/Chris_UM/Database/A_Nidulans/ANidulans_OrgDb/geneid2go.ANidulans.topGO.map"
-file_geneInfo <- "E:/Chris_UM/Database/A_Nidulans/A_nidulans_FGSC_A4_geneClasses.txt"
-
-
-TF_dataPath <- here::here("data", "TF_data")
-polII_dataPath <- here::here("data", "polII_data")
-hist_dataPath <- here::here("data", "histone_data")
 
 
 ## colors
 colList <- list()
 
-outPrefix_all <- paste0(outPrefix, "_allGenes", collapse = "")
-outPrefix_geneset <- paste0(outPrefix, "_genes", collapse = "")
+outPrefix_all <- paste(outPrefix, "_allGenes", sep = "")
+outPrefix_geneset <- paste(outPrefix, "_genes", sep = "")
 
 
 ##################################################################################
-sampleList <- readr::read_tsv(file = file_plotSamples, col_names = T, comment = "#")
+sampleList <- suppressMessages(readr::read_tsv(file = file_plotSamples, comment = "#"))
 
-tempSInfo <- get_sample_information(exptInfoFile = file_exptInfo,
-                                    samples = sampleList$sampleId,
-                                    dataPath = TF_dataPath,
-                                    profileMatrixSuffix = matrixType)
+tempSInfo <- get_sample_information(
+  exptInfoFile = file_exptInfo, samples = sampleList$sampleId,
+  dataPath = TF_dataPath, profileMatrixSuffix = matrixType
+)
 
 tfIds <- tempSInfo$sampleId[which(tempSInfo$IP_tag %in% c("HA", "MYC", "TAP") & tempSInfo$TF != "untagged")]
 inputIds <- tempSInfo$sampleId[which(! tempSInfo$IP_tag %in% c("polII", "HIST") & tempSInfo$TF == "untagged")]
@@ -68,26 +66,26 @@ histIds <- tempSInfo$sampleId[which(tempSInfo$IP_tag == "HIST")]
 
 
 ## read the experiment sample details and select only those which are to be plotted
-tfData <- get_sample_information(exptInfoFile = file_exptInfo,
-                                 samples = tfIds,
-                                 dataPath = TF_dataPath,
-                                 profileMatrixSuffix = matrixType)
+tfData <- get_sample_information(
+  exptInfoFile = file_exptInfo, samples = tfIds,
+  dataPath = TF_dataPath, profileMatrixSuffix = matrixType
+)
 
 
-inputData <- get_sample_information(exptInfoFile = file_exptInfo,
-                                    samples = inputIds,
-                                    dataPath = TF_dataPath,
-                                    profileMatrixSuffix = matrixType)
+inputData <- get_sample_information(
+  exptInfoFile = file_exptInfo, samples = inputIds,
+  dataPath = TF_dataPath, profileMatrixSuffix = matrixType
+)
 
-polIIData <- get_sample_information(exptInfoFile = file_exptInfo,
-                                    samples = polII_ids,
-                                    dataPath = polII_dataPath,
-                                    profileMatrixSuffix = matrixType)
+polIIData <- get_sample_information(
+  exptInfoFile = file_exptInfo, samples = polII_ids,
+  dataPath = polII_dataPath, profileMatrixSuffix = matrixType
+)
 
-histData <- get_sample_information(exptInfoFile = file_exptInfo,
-                                   samples = histIds,
-                                   dataPath = hist_dataPath,
-                                   profileMatrixSuffix = matrixType)
+histData <- get_sample_information(
+  exptInfoFile = file_exptInfo, samples = histIds,
+  dataPath = hist_dataPath, profileMatrixSuffix = matrixType
+)
 
 
 exptData <- dplyr::bind_rows(tfData, inputData, histData, polIIData)
@@ -112,12 +110,12 @@ tfCols <- sapply(
 
 ## genes to read
 geneSet <- data.table::fread(file = file_genes, header = F,
-                             col.names = c("chr", "start", "end", "geneId", "score", "strand")) %>% 
-  dplyr::select(geneId)
+                             col.names = c("chr", "start", "end", "geneId", "score", "strand"))
 
-kmClust <- dplyr::left_join(x = readr::read_tsv(file = tfData$clusterFile[1], col_names = T),
-                            y = geneSet,
-                            by = c("geneId" = "geneId"))
+kmClust <- dplyr::left_join(
+  x = suppressMessages(readr::read_tsv(file = tfData$clusterFile[1])),
+  y = geneSet, by = c("geneId" = "geneId")
+)
 
 geneDesc <- AnnotationDbi::select(x = orgDb, keys = geneSet$gene, keytype = "GID",
                                   columns = c("GENE_NAME", "DESCRIPTION")) %>% 
@@ -219,7 +217,7 @@ histColorList <- NULL
 #   X = histData$sampleId,
 #   FUN = function(x){
 #     return(colorRamp2(breaks = quantile(histMeanProfile, c(0.30, 0.995), na.rm = T),
-#                       colors =  c("black", exptDataList[[x]]$color)))
+#                       colors =  unlist(strsplit(x = exptDataList[[x]]$color, split = ","))))
 #   }
 # )
 
@@ -294,19 +292,21 @@ geneSubset <- dplyr::left_join(x = geneSubset, y = peakTargetMat, by = "geneId")
   dplyr::left_join(y = geneInfo, by = "geneId")
 
 
-multiProfiles_geneset <- multi_profile_plots(exptInfo = exptData,
-                                             genesToPlot = geneSubset$geneId,
-                                             targetType = "point",
-                                             targetName = "ATG",
-                                             matBins = matrixDim,
-                                             clusters = NULL,
-                                             showAnnotation = FALSE,
-                                             profileColors = colorList,
-                                             column_title_gp = gpar(fontsize = 12),
-                                             # row_order = geneSubset$geneId,
-                                             # show_row_names = TRUE,
-                                             # row_labels = geneSubset$geneName,
-                                             ylimFraction = ylimList)
+multiProfiles_geneset <- multi_profile_plots(
+  exptInfo = exptData,
+  genesToPlot = geneSubset$geneId,
+  targetType = "point",
+  targetName = "ATG",
+  matBins = matrixDim,
+  clusters = NULL,
+  showAnnotation = FALSE,
+  profileColors = colorList,
+  column_title_gp = gpar(fontsize = 12),
+  # row_order = geneSubset$geneId,
+  # show_row_names = TRUE,
+  # row_labels = geneSubset$geneName,
+  ylimFraction = ylimList
+)
 
 
 pdfWd <- 2 + 
@@ -334,15 +334,15 @@ title_geneset = paste(comparisonName, ": genes of interest", collapse = "")
 pdf(file = paste(outPrefix_geneset, ".profiles.pdf", sep = ""), width = pdfWd, height = 12)
 
 geneset_htlist <- draw(geneset_htlist,
-     main_heatmap = exptData$profileName[1],
-     # annotation_legend_list = list(profile1$legend),
-     split = geneSubset$group,
-     column_title = title_geneset,
-     column_title_gp = gpar(fontsize = 14, fontface = "bold"),
-     row_sub_title_side = "left",
-     heatmap_legend_side = "bottom",
-     gap = unit(7, "mm"),
-     padding = unit(rep(0.5, times = 4), "cm")
+                       main_heatmap = exptData$profileName[1],
+                       # annotation_legend_list = list(profile1$legend),
+                       split = geneSubset$group,
+                       column_title = title_geneset,
+                       column_title_gp = gpar(fontsize = 14, fontface = "bold"),
+                       row_sub_title_side = "left",
+                       heatmap_legend_side = "bottom",
+                       gap = unit(7, "mm"),
+                       padding = unit(rep(0.5, times = 4), "cm")
 )
 
 dev.off()
@@ -353,7 +353,7 @@ rowOrderDf <- row_order(geneset_htlist) %>%
 
 ordered_data <- dplyr::left_join(x = rowOrderDf, y = geneSubset, by = "geneId")
 
-readr::write_tsv(x = ordered_data, path = paste(outPrefix_geneset, ".data.tab", sep = ""))
+readr::write_tsv(x = ordered_data, file = paste(outPrefix_geneset, ".data.tab", sep = ""))
 
 ##################################################################################
 
